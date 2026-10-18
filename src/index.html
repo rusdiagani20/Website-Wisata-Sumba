@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="32x32" href="favicon/favicon-32x32.png" type="image/png">
+    <title>Home - Sumba Tropical Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <header class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm dark:bg-gray-900/70">
+        <nav aria-label="Global" class="flex items-center justify-between p-3 shadow-xl lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center gap-1.4">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-9 pb-2 text-blue-950 dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    <h1 class="text-blue-900 font-semibold lg:text-xl dark:text-blue-500">Sumba Tropical Luxury</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-5">
+                <a href="index.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50 
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Home
+                </a>
+
+                <a href="destinations.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Destinations
+                </a>
+
+                <a href="gallery.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Gallery
+                </a>
+
+                <a href="about.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                About
+                </a>
+
+                <a href="contact.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Contact
+                </a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end">
+                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-500 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 dark:bg-neutral-secondary-medium sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+                    </a>
+                        <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500">
+                            <div class="space-y-2 py-6">
+                                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Home</a>
+                                <a href="destinations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Destinations</a>
+                                <a href="gallery.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Gallery</a>
+                                <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">About</a>
+                                <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Contact</a>
+                            </div>
+                            <div class="py-6 flex flex-col gap-3">
+                                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-center text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                                <button id="theme-toggle-mobile" type="button" class="w-full text-blue-950 bg-gray-200 text-center text-sm font-semibold p-2.5 ring-2 ring-gray-400 rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-50 dark:ring-gray-600 dark:hover:bg-gray-600 flex items-center justify-center gap-2">
+                                    <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                    <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+    <section>
+        <div class="flex flex-col items-center justify-center gap-5
+            min-h-screen
+            bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfoD7a5BHSHf__QvGl4ygiWeeIQM_KIo-FSn6_s5R7Bah_6UmlSRPexI2EAmclOmuqVW-UIdDvS1wnkORNntfQQdElCmwyaypwpZIGVZQrAMa0IIiKvhEtk8RsK53k1wWamPnqTSIMfPgtFvFSntwxKO4LfZM-bTi3_R238IrMLWcN0lr8UbP3oCTNdqEj6t7024VLT2m54biU2FrvwpgRQjQMPbsFTALRA2FUonAeHBuaC-IDKJfmP_DFNixcyzN8a7LubtquIS5E')] 
+            bg-cover bg-center bg-no-repeat">
+
+            <div class="flex flex-col items-center text-center gap-5 pt-10 px-36 mb-10 max-sm:pt-10 max-sm:px-5">
+                <p class="tracking-widest lg:text-lg md:text-sm max-sm:text-xs">THE COASTAL CURATED</p>
+                <h1 class="text-blue-950 lg:text-8xl md:text-5xl max-sm:text-2xl">Sumba Tropical Luxury</h1>
+                <p class="text-gray-100 font-semibold lg:text-base md:text-xs max-sm:text-sm text-center">
+                    Experience the raw beauty of Indonesia's hidden gem. Where ancient culture meets untouched coastlines and ultra-luxury hospitality.
+                </p>
+            </div>
+
+            <div class="flex gap-5">
+                <a class="flex justify-center items-center gap-2 ring-2 bg-blue-900 text-white px-4 py-2 w-43 rounded hover:bg-blue-950 lg:text-sm md:text-xs max-sm:text-xs font-semibold" href="destinations.html">Explore Beaches
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col gap-5 mt-20 mb-10 mx-25 max-sm:mx-5">
+            <h1 class="text-blue-950 lg:text-5xl md:text-3xl max-sm:text-xl dark:text-blue-500">Pristine <span class="italic">Sanctuaries</span></h1>
+            <div class="flex justify-between md:flex-row lg:flex-row max-sm:flex-col gap-2">
+                <p class="lg:w-150 md:w-100 lg:text-base md:text-sm max-sm:text-sm dark:text-gray-50">Discover the most breathtaking coastal escapes Sumba has to offer, from the dancing trees of Walakiri to the deep azure of Nihiwatu.</p>
+                <div class="flex items-end max-sm:flex max-sm:justify-end group">
+                    <a href="destinations.html" class="flex lg:text-base md:text-xs max-sm:text-xs font-semibold text-blue-900 border-b border-blue-900 group-hover:text-blue-950 dark:text-blue-500 dark:border-blue-500 dark:group-hover:text-blue-700">
+                        All Destinations
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:size-4 md:size-2.5 max-sm:size-2 m-0.5 group-hover:text-blue-950 dark:group-hover:text-blue-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </div>  
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10 mx-25 max-sm:mx-5">
+            <!-- Card 1 -->
+            <div class="lg:col-span-2 flex-1 shadow-xl/20 rounded-sm dark:bg-neutral-secondary-medium group">
+                <a href="walakiri_destination_detail.html">
+                    <div class="relative w-full h-100 rounded-t-lg overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJuv33ibdkWeLyCpipms2c_HEY0ldswZkDmfjCytRP0iRLULoq88UIPwVxvZtn0DmwFGzKhb_byD7U_01Dy3G3ff1R5HwvRMnitUfUzozOqhrhTY2ZKnNd-fhIx1yP64zmKJH_AWjqyZx4rbhHMW44ujit1zHHBYk2avHeVxn1pyOEDjq9EATwuMyDDyiUaaNUgBZGPyJ97WBOivbOXPqQV7PhBq-yqM2Pc73UiB0NI71jaxMNes2yneZe_OT_KGMqNhY2acbPRO1Z" alt="" class="h-full w-full scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-3 left-3 flex flex-col">
+                            <span class="bg-gray-600 text-xs text-white text-center font-manrope font-semibold rounded-2xl">Favorite Destinations</span>
+                            <span class="lg:text-xl md:text-xl max-sm:text-lg text-white font-noto">Walakiri Beach</span>
+                        </div>
+                    </div>
+                    <div class="flex lg:flex-row md:flex-col max-sm:flex-col lg:items-center lg:justify-between lg:gap-5 lg:mt-8 md:my-5 max-sm:my-3 max-sm:gap-2 px-3">
+                        <p class="lg:text-xl md:text-base max-sm:text-sm text-gray-700 text-justify lg:font-semibold dark:text-gray-50">Witness the ethereal silhouette of the "Dancing Trees" as the golden hour transforms the Sumba coast into a living gallery.</p>
+                        <a href="walakiri_destination_detail.html" class="flex items-center gap-2 lg:text-base md:text-base max-sm:text-sm text-blue-500 group-hover:text-blue-700 font-semibold md:mt-2">Explore
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex-1 shadow-xl/20 rounded-sm dark:bg-neutral-secondary-medium group">
+                <a href="walakiri_destination_detail.html">
+                    <div class="relative w-full h-100 rounded-t-lg overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbGga3RCSWwm2i0y1MRN_mXjrdEaE0z_Q1PiMDI6h6NFJEcrPayvnsZJ-3tgedPJujHo4m6xBpETHEFhpDq3Ao1gIdhgsquoR2DJWovDYaHNNIEOebwW3-zDGePUMOLPeqQyTDcTLmgQO-umZHw2EWTOaSzkVN--IMtLDB-xgb7AU-r2z1SFRWMshKj6V0boIsQJtt5Z7uo3n5_JI_6vwvknbnPOpA_URmUgD37RLhzJ6F5ZzyorZEci6Z8IYbirB4iLEIk1MbUcZq" alt="" class="h-full w-full scale-100 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-3 left-3 flex flex-col">
+                            <span class="bg-red-300 text-xs text-white text-center font-manrope font-semibold rounded-2xl w-25">Hidden Core</span>
+                            <span class="lg:text-xl md:text-xl max-sm:text-lg text-white font-noto">Weekuri Lagoon</span>
+                        </div>
+                    </div>
+                    <div class="my-5 px-3 max-sm:my-3">
+                        <p class="lg:text-xl md:text-base max-sm:text-sm text-gray-700 text-justify mt-2 dark:text-gray-50">A hidden saltwater lagoon with crystal clear emerald waters separated from the ocean by majestic cliffs.</p>
+                        <a href="#" class="flex items-center gap-2 lg:text-base md:text-base max-sm:text-sm text-blue-500 group-hover:text-blue-700 font-semibold mt-2">Explore
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-wrap max-sm:flex-col gap-10 my-20 mx-25 max-sm:mx-5">
+            <div class="flex-1">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE7zK8AS1-QGFXQKA64Wl9CKkrZdPTC-3RqRB7rHNCVdQxRlvdj_U8dxylvUalH-5w-ZO165ePbglZek4TUIcIHrYzrBtP3czOaLch9ss1W-O2CgP1bRJUhKsBKNdap_UWRMp81GWpV2L5wm64EQhP_rEtKb8m2U_soMxxYyCEK9rC_N8qPjOTgXkObJcMwN-rr8SNUzmBLbY9Pi3oBt83Ln7tgU46vjoeRmKzA-jUuKydW8YKTaoBryp20KIzzSeHP3XS3plj3-5E" alt="" class="h-full w-full">
+            </div>
+            <div class="flex-1 flex flex-col justify-center lg:gap-5 md:gap-3 max-sm:gap-3">
+                <p class="lg:text-lg md:text-base max-sm:text-base font-bold text-cyan-700">ISLAND HERITAGE</p>
+                <h1 class="lg:text-5xl md:text-2xl max-sm:text-xl text-blue-950 dark:text-blue-500">Where Time Stands Still</h1>
+                <p class="text-justify dark:text-gray-50 lg:text-base md:text-sm max-sm:text-sm">Sumba is an island unlike any other in Indonesia. Far from the crowded streets of Bali, it offers a window into a lifestyle that has remained largely unchanged for centuries.</p>
+                <p class="text-justify dark:text-gray-50 lg:text-base md:text-sm max-sm:text-sm">From the megalithic tombs and thatched-roof villages to the legendary Pasola horse festivals, the culture here is as wild and beautiful as the terrain itself.</p>
+                <div class="flex items-center gap-10 lg:mt-5 md:mt-3">
+                    <div>
+                        <p class="flex text-blue-950 lg:text-2xl md:text-xl max-sm:text-base font-stretch-50% dark:text-blue-500">170
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:size-8 md:size-7 max-sm:size-6 h-8 pb-2 text-blue-950 dark:text-blue-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </p>
+                        <p class="lg:text-base md:text-sm max-sm:text-sm dark:text-gray-50">INDIGENOUS VILLAGES</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-950 lg:text-2xl md:text-xl max-sm:text-base font-stretch-50% dark:text-blue-500">200km</p>
+                        <p class="lg:text-base md:text-sm max-sm:text-sm dark:text-gray-50">VIRGIN COASTLINE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col items-center mx-25 max-sm:mx-5">
+            <h1 class="lg:text-4xl md:text-3xl text-blue-950 dark:text-blue-500">Guest Perspectives</h1>
+            <div class="bg-cyan-900 h-1 w-40 my-2"></div>
+        </div>
+        <div class="flex items-center justify-between mx-25 my-10 max-sm:mx-5">
+            <!-- Modal toggle -->
+            <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="lg:text-base md:text-xs max-sm:text-xs text-blue-950 bg-white box-border ring ring-blue-950 hover:bg-blue-300 focus:ring-4 focus:ring-brand-medium shadow-xs font-manrope font-semibold leading-5 rounded-base text-sm lg:px-4 md:px-4 lg:py-2.5 md:py-2 focus:outline-none dark:bg-neutral-secondary-medium dark:text-gray-50 dark:ring dark:ring-gray-50 dark:hover:bg-neutral-tertiary-medium" type="button">
+            Write a Review
+            </button>
+
+            <!-- Main modal -->
+            <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative p-4 w-full max-w-md max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                            <h3 class="text-lg font-medium text-heading">
+                                Write a Message
+                            </h3>
+                            <button type="button" class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="crud-modal">
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <form id="reviewForm" action="#">
+                            <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
+                                <div class="col-span-2">
+                                    <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Avatar</label>
+                                    <input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" accept="image/*" id="file_input" type="file">
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG or JPG (Max 500KB).</p>
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="reviewName" class="block mb-2.5 text-sm font-medium text-heading">Name</label>
+                                    <input type="text" name="reviewName" id="reviewName" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Enter your name" required="">
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="reviewJob" class="block mb-2.5 text-sm font-medium text-heading">Job Title</label>
+                                    <input type="text" name="reviewJob" id="reviewJob" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Enter your job title" required="">
+                                </div>
+                                <div class="col-span-2">
+                                    <label class="block mb-2.5 text-sm font-medium text-heading">Rating</label>
+                                    <div id="ratingStars" class="flex gap-2">
+                                        <button type="button" class="star-btn" data-rating="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-gray-400 hover:text-cyan-900 dark:hover:text-cyan-500 cursor-pointer transition"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg></button>
+                                        <button type="button" class="star-btn" data-rating="2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-gray-400 hover:text-cyan-900 dark:hover:text-cyan-500 cursor-pointer transition"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg></button>
+                                        <button type="button" class="star-btn" data-rating="3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-gray-400 hover:text-cyan-900 dark:hover:text-cyan-500 cursor-pointer transition"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg></button>
+                                        <button type="button" class="star-btn" data-rating="4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-gray-400 hover:text-cyan-900 dark:hover:text-cyan-500 cursor-pointer transition"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg></button>
+                                        <button type="button" class="star-btn" data-rating="5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-gray-400 hover:text-cyan-900 dark:hover:text-cyan-500 cursor-pointer transition"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg></button>
+                                    </div>
+                                    <input type="hidden" id="ratingValue" value="0">
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="reviewMessage" class="block mb-2.5 text-sm font-medium text-heading">Message</label>
+                                    <textarea id="reviewMessage" rows="4" class="block bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your review here" required=""></textarea>                    
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 border-t border-default pt-4 md:pt-6">
+                                <button type="submit" class="inline-flex items-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                                    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                                    Save Review
+                                </button>
+                                <button data-modal-hide="crud-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="flex items-center group">
+                <a href="#" id="show-more-btn" class="flex lg:text-base md:text-xs max-sm:text-xs gap-2 text-blue-900 font-semibold group-hover:text-blue-950 dark:text-blue-500 dark:group-hover:text-blue-700">Show more
+                    <svg class="lg:size-4 md:size-2.5 max-sm:size-2.5 text-blue-900 dark:text-blue-500 group-hover:text-blue-950 dark:group-hover:text-blue-700" xmlns="http://www.w3.org/2000/svg" height="none" viewBox="0 -960 960 960" width="none" fill="currentColor">
+                        <path d="M680-320v-360H320v-80h440v440h-80ZM480-120v-360H120v-80h440v440h-80Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="lg:grid lg:grid-cols-3 md:flex md:flex-col max-sm:flex max-sm:flex-col mb-20 mx-25 max-sm:mx-5 gap-5 max-sm:gap-3" id="testimonials-container">
+            <!-- Main Content Card Testimoni -->
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col items-center gap-8 p-20 max-sm:p-5 rounded-lg mx-25 max-sm:mx-5 my-20 max-sm:my-5
+            bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpfcr5hIY5fzWU1BncCXLtBUrfWXvY4EE1FO99ggzYZAujj5I1MEEoEzCHZn2EcyHyuVBWkU0Rd0YNcJjKR6PEcdnmxgsnPheHZNUgfhYoINYDMa-AhkDCXmbMh4x58JBcZCyjta1vMuLEIqIEpsQPtbVTPu8Haldtb7SSWUlEu4nvORMgSgD_Kt_hRsBAJ0asR3jDO2KO-p44BUZWuphw6mYxo6uPgCfELe_yn0VPbFpKaYoJXmr538cs637TyyR7reV77yzFmTuE')] 
+            bg-cover bg-center bg-no-repeat bg-blue-400 bg-blend-soft-light">
+            <h1 class="lg:text-5xl md:text-2xl max-sm:text-xl text-white text-center">Begin Your Sumba Journey</h1>
+            <p class="lg:text-base md:text-sm max-sm:text-sm text-gray-800 font-semibold text-center">Connect with our local experts to curate your private escape to the last frontier of Indonesian luxury.</p>
+            <div class="flex gap-5">
+                <a class="lg:text-base md:text-sm max-sm:text-xs max-sm:text-center bg-sky-900 text-white font-semibold py-2 px-4 ring-2 rounded hover:bg-sky-950" href="https://wa.me/6281234567890">Request Private Tour</a>
+                <a class="lg:text-base md:text-sm max-sm:text-xs max-sm:text-center text-white font-semibold py-2 px-4 ring-2 rounded hover:bg-gray-400/30" href="https://wa.me/6281234567890">Join Newsletter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="py-3 mt-10">
+            <div class="flex items-center justify-between mx-25 max-sm:mx-5 lg:gap-2 md:gap-2 max-sm:hidden">
+                <div class="flex flex-col justify-center lg:gap-4 md:gap-3 lg:w-100 md:w-60">
+                    <h3 class="lg:text-2xl md:text-xl text-blue-950 font-semibold dark:text-blue-500">Sumba Tropical Luxury</h3>
+                    <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">Curating the finest coastal experiences on Indonesia's most mystical island.</p>
+                </div>
+                <div class="flex lg:flex-row md:flex-col items-center lg:gap-4 md:gap-1.5">
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Privacy Policy</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Terms of Service</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="contact.html">Contact Us</a>
+                </div>
+                <div class="flex items-center justify-center lg:gap-4 md:gap-3">
+                    <a href="" title="Instagram">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="" title="Facebook">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mx-25 max-sm:mx-5 py-2">
+                <p class="lg:text-base md:text-xs max-sm:text-xs max-sm:text-center text-gray-700 font-semibold dark:text-gray-50">&copy; 2024 Sumba Tropical Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scrollToTopBtn" class="fixed bottom-10 right-10 flex items-center justify-center bg-blue-800 text-white rounded-full shadow-lg hover:bg-blue-900 h-13.5 w-13.5 p-2 transition-all duration-500 cursor-pointer opacity-0 invisible translate-y-4 z-50 max-sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

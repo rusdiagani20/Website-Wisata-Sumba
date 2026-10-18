@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="32x32" href="favicon/favicon-32x32.png" type="image/png">
+    <title>Pero Beach - Destination Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <header class="sticky top-0 w-full z-50 bg-white/30 backdrop-blur-sm dark:bg-gray-900/70">
+        <nav aria-label="Global" class="flex items-center justify-between p-3 shadow-xl lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center gap-1.4">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-9 pb-2 text-blue-950 dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    <h1 class="text-blue-900 font-semibold lg:text-xl dark:text-blue-500">Sumba Tropical Luxury</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-5">
+                <a href="index.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50 
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Home
+                </a>
+
+                <a href="destinations.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Destinations
+                </a>
+
+                <a href="gallery.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Gallery
+                </a>
+
+                <a href="about.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                About
+                </a>
+
+                <a href="contact.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Contact
+                </a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end">
+                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-500 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 dark:bg-neutral-secondary-medium sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+                    </a>
+                        <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500">
+                            <div class="space-y-2 py-6">
+                                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Home</a>
+                                <a href="destinations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Destinations</a>
+                                <a href="gallery.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Gallery</a>
+                                <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">About</a>
+                                <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Contact</a>
+                            </div>
+                            <div class="py-6 flex flex-col gap-3">
+                                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-center text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                                <button id="theme-toggle-mobile" type="button" class="w-full text-blue-950 bg-gray-200 text-center text-sm font-semibold p-2.5 ring-2 ring-gray-400 rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-50 dark:ring-gray-600 dark:hover:bg-gray-600 flex items-center justify-center gap-2">
+                                    <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                    <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+    <section>
+        <div class="relative flex flex-col items-center justify-center gap-10
+            min-h-screen
+            bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuA83_jkwG3qxPwk0AY826W4X09LX1kPwHK56hcJEp-54jwYFjqDCjLemVRmLMDMlhiMzBKVc-9NqKQpEnInqcClpXKqlTcKdwmsHxHXApT1dCr_A-8NXa6ZrlsAWeNzZwdEtl7OpZYDNCYBkpEmikhiiLegnqAz8m3yLOywkJz28afJDKXoR0nTsqKAfTYBmwuws9-Tjq-d3yxJEq4MOLrE0U_ML8Vouf8IbZOU7Vk3Zz898Ej901rV01XE0CusXz-zeVQJjYAxhDn1')]
+            bg-cover bg-center bg-no-repeat">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center gap-5">
+                <p class="lg:text-xl md:text-lg text-white font-semibold font-manrope">S U M B A</p>
+                <h1 class="lg:text-8xl md:text-5xl text-white font-bold">Pero</h1>
+                <p class="lg:text-md md:text-sm text-white font-semibold text-center rounded">
+                    Famous for its stunning sunset views, big waves for surfing, and sturdy coral reefs that create waterblow phenomena.
+                </p>
+            </div>
+            <div class="absolute top-2 left-2">
+                <button onclick="goBack()" class="flex gap-1 bg-white/30 backdrop-blur-sm text-gray-50 border border-default-medium rounded-base p-2 hover:bg-white/50 dark:bg-neutral-secondary-medium/70 dark:hover:bg-neutral-tertiary-medium/70">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="m480-320 56-56-64-64h168v-80H472l64-64-56-56-160 160 160 160Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                    </svg>Back
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex lg:flex-row md:flex-col gap-10 my-20 mx-25">
+            <div class="flex flex-col gap-5 shadow-lg p-10 rounded-lg w-full h-full text-justify dark:bg-neutral-secondary-medium">
+                <h1 class="lg:text-3xl md:text-2xl text-blue-950 dark:text-blue-500">Authentic Local Atmosphere</h1>
+                <p class="lg:text-base md:text-sm text-gray-500">This beach is famous for its traditional fishing activities, authentic local atmosphere, and quite large waves.</p>
+            </div>
+            <div class="flex flex-col justify-center gap-10 shadow-lg p-10 rounded-lg lg:w-200 md:w-full dark:bg-neutral-secondary-medium">
+                <div class="flex flex-col justify-center gap-5">
+                    <p class="lg:text-xl md:text-lg text-cyan-700 font-semibold">Destination Highlights</p>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M440-40v-167l-44 43-56-56 140-140 140 140-56 56-44-43v167h-80ZM220-340l-56-56 43-44H40v-80h167l-43-44 56-56 140 140-140 140Zm520 0L600-480l140-140 56 56-43 44h167v80H753l43 44-56 56Zm-260-80q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Zm0-180L340-740l56-56 44 43v-167h80v167l44-43 56 56-140 140Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="lg:text-base md:text-sm text-blue-950 font-semibold dark:text-blue-500">Legendary Sunset</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">Widely considered the most beautiful sunset viewpoint in Indonesia.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M80-146v-78q29 0 49.5-9t41.5-19.5q21-10.5 46.5-19t63-8.5q37.5 0 62 8.5t45.5 19q21 10.5 42 19.5t50 9q29 0 50-9t42-19.5q21-10.5 46-19t62.5-8.5q37.5 0 62.5 8.5t46 19q21 10.5 42 19.5t49 9v78q-38 0-63.5-9T770-174.5q-21-10.5-41-19t-49-8.5q-28 0-48.5 8.5t-41 19Q570-164 544.5-155t-64.5 9q-39 0-64.5-9t-46-19.5Q349-185 329-193.5t-48.5-8.5q-28.5 0-49 8.5t-41.5 19Q169-164 143.5-155T80-146Zm0-178v-78q29 0 49.5-9t41.5-19.5q21-10.5 46.5-19t63-8.5q37.5 0 62 8.5t45.5 19q21 10.5 42 19.5t50 9q29 0 50-9t42-19.5q21-10.5 46-19t62-8.5q38 0 63 8.5t46 19q21 10.5 42 19.5t49 9v78q-38 0-63.5-9T770-352.5q-21-10.5-41-19t-49-8.5q-29 0-49.5 8.5t-41 19Q569-342 544-333t-64 9q-39 0-64.5-9t-46-19.5Q349-363 329-371.5t-48.5-8.5q-28.5 0-49 8.5t-41.5 19Q169-342 143.5-333T80-324Zm0-178v-78q29 0 49.5-9t41.5-19.5q21-10.5 46.5-19t63-8.5q37.5 0 62 8.5t45.5 19q21 10.5 42 19.5t50 9q29 0 50-9t42-19.5q21-10.5 46-19t62-8.5q38 0 63 8.5t46 19q21 10.5 42 19.5t49 9v78q-38 0-63.5-9T770-530.5q-21-10.5-41-19t-49-8.5q-28 0-48.5 8.5t-41 19Q570-520 544.5-511t-64.5 9q-39 0-64.5-9t-46-19.5Q349-541 329-549.5t-48.5-8.5q-28.5 0-49 8.5t-41.5 19Q169-520 143.5-511T80-502Zm0-178v-78q29 0 49.5-9t41.5-19.5q21-10.5 46.5-19t63-8.5q37.5 0 62 8.5t45.5 19q21 10.5 42 19.5t50 9q29 0 50-9t42-19.5q21-10.5 46-19t62-8.5q38 0 63 8.5t46 19q21 10.5 42 19.5t49 9v78q-38 0-63.5-9T770-708.5q-21-10.5-41-19t-49-8.5q-28 0-48.5 8.5t-41 19Q570-698 544.5-689t-64.5 9q-39 0-64.5-9t-46-19.5Q349-719 329-727.5t-48.5-8.5q-28.5 0-49 8.5t-41.5 19Q169-698 143.5-689T80-680Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="lg:text-base md:text-sm text-blue-950 font-semibold dark:text-blue-500">Calm Waters</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">Shallow, crystalline waters perfect for peaceful evening strolls.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M180-520q-26 0-43-17t-17-43q0-26 17-43t43-17q26 0 43 17t17 43q0 26-17 43t-43 17ZM120-80v-200H80v-160q0-17 11.5-28.5T120-480h120q17 0 28.5 11.5T280-440v160h-40v120h320v-200h-70q-71 0-120.5-49.5T320-530q0-53 28.5-94.5T422-686q11-65 60.5-109.5T600-840q68 0 117.5 44.5T778-686q45 20 73.5 61.5T880-530q0 71-49.5 120.5T710-360h-70v200h200v80H120Zm370-360h220q38 0 64-26t26-64q0-27-14.5-49T746-612l-42-18-6-44q-6-37-33.5-61.5T600-760q-37 0-64.5 24.5T502-674l-6 44-42 18q-25 11-39.5 33T400-530q0 38 26 64t64 26Zm110-160Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="lg:text-base md:text-sm text-blue-950 font-semibold dark:text-blue-500">Calm Waters</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">The iconic dwarf mangroves (Rhizophora Mucronata) found only here.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="my-20 mx-25">
+            <h1 class="text-3xl text-blue-900 text-center dark:text-blue-500">A Visual Journey</h1>
+            <div class="grid grid-cols-6 gap-5 my-10">
+                <div class="col-span-3 w-full h-76 overflow-hidden">
+                    <img class="h-full w-full scale-100 hover:scale-105 transition-transform duration-700" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBRFvZBPwzHdsYSBXr_K6FCVgTZvtuzRkhrA&s" alt="">
+                </div>
+                <div class="col-span-3 w-full h-76 overflow-hidden">
+                    <img class="h-full w-full scale-100 hover:scale-105 transition-transform duration-700" src="https://tripsumba.com/wp-content/uploads/2020/07/Pantai-Pero-Sumba-Tempat-melihat-sunset-di-Sumba-1024x1024.jpg" alt="">
+                </div>
+                <div class="col-span-2 w-full h-76 overflow-hidden">
+                    <img class="h-full w-full scale-100 hover:scale-105 transition-transform duration-700" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQArHExbaQ5CP8_iP_4U7KGVWJiI0WzuWi_mw&s" alt="">
+                </div>
+                <div class="col-span-4 w-full h-76 overflow-hidden">
+                    <img class="h-full w-full scale-100 hover:scale-105 transition-transform duration-700" src="https://tripsumba.com/wp-content/uploads/2020/07/pantai-pero-1248x703-1-e1594558861384.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex lg:flex-row md:flex-col gap-5 my-20 mx-25 shadow-lg p-10 rounded-lg dark:bg-neutral-secondary-medium">
+            <div class="flex flex-col gap-5 w-full h-full">
+                <h4 class="lg:text-3xl md:text-2xl text-blue-900 dark:text-blue-500">Locating Serenity</h4>
+                <p class="lg:text-base md:text-sm text-gray-500 text-justify">Pero Beach is located approximately 20 km west of the town of Waitabula and is easily accessible by a 45-minute drive.</p>
+                <div class="flex justify-start gap-5">
+                    <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                    <div class="flex flex-col">
+                        <p class="lg:text-base md:text-sm text-blue-950 font-manrope font-semibold dark:text-blue-500">Southwest Sumba Regency, NTT</p>
+                    </div>
+                </div>
+                <div class="flex justify-start gap-5">
+                    <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
+                    <div class="flex flex-col">
+                        <p class="lg:text-base md:text-sm text-blue-950 font-manrope font-semibold dark:text-blue-500">Recommended: 09:00 – 15:00 WITA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-500 md:w-full">
+                <iframe class="h-full w-full rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.8598340917465!2d118.98277627408304!3d-9.607335401287736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4abe45d1c3292d%3A0xa44174accca7ddfa!2sPero%20Beach!5e0!3m2!1sen!2sid!4v1777988743250!5m2!1sen!2sid" width="none" height="none" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="py-3 mt-10">
+            <div class="flex items-center justify-between mx-25 lg:gap-2 md:gap-2">
+                <div class="flex flex-col justify-center lg:gap-4 md:gap-3 lg:w-100 md:w-60">
+                    <h3 class="lg:text-2xl md:text-xl text-blue-950 font-semibold dark:text-blue-500">Sumba Tropical Luxury</h3>
+                    <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">Curating the finest coastal experiences on Indonesia's most mystical island.</p>
+                </div>
+                <div class="flex lg:flex-row md:flex-col items-center lg:gap-4 md:gap-1.5">
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Privacy Policy</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Terms of Service</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="contact.html">Contact Us</a>
+                </div>
+                <div class="flex items-center justify-center lg:gap-4 md:gap-3">
+                    <a href="" title="Instagram">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="" title="Facebook">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mx-25 py-2">
+                <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">&copy; 2024 Sumba Tropical Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

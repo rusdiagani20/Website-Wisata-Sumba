@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="32x32" href="favicon/favicon-32x32.png" type="image/png">
+    <title>Gallery - Sumba Tropical Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <header class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm dark:bg-gray-900/70">
+        <nav aria-label="Global" class="flex items-center justify-between p-3 shadow-xl lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center gap-1.4">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-9 pb-2 text-blue-950 dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    <h1 class="text-blue-900 font-semibold lg:text-xl dark:text-blue-500">Sumba Tropical Luxury</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-5">
+                <a href="index.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50 
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Home
+                </a>
+
+                <a href="destinations.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Destinations
+                </a>
+
+                <a href="gallery.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Gallery
+                </a>
+
+                <a href="about.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                About
+                </a>
+
+                <a href="contact.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Contact
+                </a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end">
+                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-500 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 dark:bg-neutral-secondary-medium sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+                    </a>
+                        <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500">
+                            <div class="space-y-2 py-6">
+                                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Home</a>
+                                <a href="destinations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Destinations</a>
+                                <a href="gallery.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Gallery</a>
+                                <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">About</a>
+                                <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Contact</a>
+                            </div>
+                            <div class="py-6 flex flex-col gap-3">
+                                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-center text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                                <button id="theme-toggle-mobile" type="button" class="w-full text-blue-950 bg-gray-200 text-center text-sm font-semibold p-2.5 ring-2 ring-gray-400 rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-50 dark:ring-gray-600 dark:hover:bg-gray-600 flex items-center justify-center gap-2">
+                                    <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                    <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+
+    <section>
+        <div class="relative flex flex-col items-center justify-center gap-10 
+            min-h-screen
+            bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsAgKSXIp1XMhuo2R1WjKajBDB4sHIvff3E9vn1YmFjonlOl0gYDPD1P4RH6rwLYq1hPZtBS8vIbRoRS7sOZRDsZEO_vQqwm1KIR2XINcHjJkXIjc6yarLEO7dNwNJ35Gkt5AosBqK8bP9_wQ192DaWcZ0eYuJC8SJPHYlbzuot26qVgTx2tRH6Cp3LduMae1v4dJudRwp78pwRBkClGSGP_XOBLnuIBsw2NNt4z-psJTMlOU7_mjgh-eNj5RnII0QRc9R4uzOzwVV')]
+            bg-cover bg-center bg-no-repeat">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50"></div>
+            <div class="relative z-10 flex flex-col items-center text-center gap-5 w-3xl">
+                <h1 class="lg:text-8xl md:text-5xl text-white">A Glimpse of Paradise</h1>
+                <p class="lg:text-base md:text-sm text-gray-300 font-semibold">
+                    Where the turquoise heart of the Indian Ocean meets the ancient rhythms of Sumba. Experience the untamed beauty through our lens.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="my-10 mx-25">
+            <div class="flex items-center justify-center gap-5 my-10">
+                <a href="#" class="region-filter relative lg:text-base md:text-sm text-gray-600 font-semibold hover:text-blue-900
+                    after:content-[''] after:absolute after:left-0 after:bottom-0
+                    after:h-0.5 after:w-full after:bg-blue-900
+                    after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    hover:after:scale-x-100 dark:text-gray-50 dark:hover:text-blue-500 dark:after:bg-blue-500" data-region="all">All</a>
+                <a href="#" class="region-filter relative lg:text-base md:text-sm text-gray-600 font-semibold hover:text-blue-900
+                    after:content-[''] after:absolute after:left-0 after:bottom-0
+                    after:h-0.5 after:w-full after:bg-blue-900
+                    after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    hover:after:scale-x-100 dark:text-gray-50 dark:hover:text-blue-500 dark:after:bg-blue-500" data-region="beaches">Beaches</a>
+                <a href="#" class="region-filter relative lg:text-base md:text-sm text-gray-600 font-semibold hover:text-blue-900
+                    after:content-[''] after:absolute after:left-0 after:bottom-0
+                    after:h-0.5 after:w-full after:bg-blue-900
+                    after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    hover:after:scale-x-100 dark:text-gray-50 dark:hover:text-blue-500 dark:after:bg-blue-500" data-region="culture">Culture</a>
+                <a href="#" class="region-filter relative lg:text-base md:text-sm text-gray-600 font-semibold hover:text-blue-900
+                    after:content-[''] after:absolute after:left-0 after:bottom-0
+                    after:h-0.5 after:w-full after:bg-blue-900
+                    after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    hover:after:scale-x-100 dark:text-gray-50 dark:hover:text-blue-500 dark:after:bg-blue-500" data-region="adventures">Adventures</a>
+            </div>
+
+            <div id="gallery-group" class="grid grid-flow-row grid-cols-3 gap-4">
+                <!-- BEACHES -->
+                <div class="gallery-item relative col-span-2 w-full h-100 overflow-hidden group" data-region="beaches"
+                    data-original-class="col-span-2 w-full h-100">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-WsUM75Hg0rVP7WmMYo3CIpbX9h0hhKMi5P5iQEEo8_6CSlK8i8biUypQ4b2IgorwLUNw0-01dsPLAfbVaxZFAChx3RfKLVTVWjSF_keo5DbFe7-q_frEif-tz7YF2BUPvfTUJu02-W_KZVI8jRLpFncxmD7cVro8ffrXDBl8fxuPFwEMs_bXeUskhQuqEUdjGA5xJ0ZLTD0y6MHFW0MhUJ9cFT_ey96b4iSlexR43WsJetubw8hD83SH_K6YBs8DCB-4YMIzF53U"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Walakiri</p>
+                        <p class="text-white/70 text-xs">Beach</p>
+                    </div>
+                </div>
+
+                <!-- ADVENTURES -->
+                <div class="gallery-item relative row-span-2 w-full h-full overflow-hidden group" data-region="adventures"
+                    data-original-class="row-span-2 w-full h-full">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWc0rvI2-IdN67atae3zTbXll6MQ0WOchbDLAXrJleDGebl4iFCX3zyRdT0GQI8KQzq4E9KxU1DChmr0wcQ65_OY0flf9JKakdqPkidXITM4LI34xQI8zzzLFSY6FlGNBJmjaDcW6EHty8UXxHVyNzMZzHDmgIiekOUS0OivEZbji_v09nKK8Cf9yZTv5KHOzC2USS1SY-ZZzi3996GzlYRJVgSFxdOJja0mpyOyDy8WGNEEYBE3VnWkXEC4JAV5p357zOfEs8HKgb"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Equine Freedom</p>
+                        <p class="text-white/70 text-xs">Adventures</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative row-span-2 w-full h-full overflow-hidden group" data-region="adventures"
+                    data-original-class="row-span-2 w-full h-full">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcc0pJglkbbCs7EbIhOQ3UJaFrppOOqISMNmVcHZqplr8MfgdlnXTCoftYvRpINZaoB5CjJKIaPy5QKrxicdoa8ZuKxYonB484Xudt6FXE7BK3lEC7gxRQe1n41m36oIYSvqy4-rZ8Nthll82_ym8C6ItqvG5sk6avOwdrSL-4uC9_l8SAq3x9YunVnlozG79f4icMYPFwaGfSWqwNHlctW78IgcYl6nszIp40LCCNlYlyw4VDpjlj53ISjEewSkiKeUnWN6Dwo25N"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Ancient Echoes</p>
+                        <p class="text-white/70 text-xs">Adventures</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative w-full h-70 overflow-hidden group" data-region="adventures"
+                    data-original-class="w-full h-70">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnrDDWiQboY7bEhsfMuEAtNQKeO0MBH1oQ6ZEawDbXVJx8ZpEXvDnOlyVee0QOP87u590vt_6XVmrPlmYiF7DS7YJDmiiEzEMg63RQet5akcCENF83aZMZP382b-eQqkrfaMSRUV32V0zuPFr-CcIBQRoDWNVB-RoFxer0D23M4xvABLddQu7MLb97w7aD8l2l9n_4qMpMtA1gyNTDFarkbDb5-y93GzPV8_uM7Xrp6guMoe5qIQEiOy9gGOe-Xnrkykt9lMKTfHxK"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Wairinding Vistas</p>
+                        <p class="text-white/70 text-xs">Adventures</p>
+                    </div>
+                </div>
+
+                <!-- BEACHES -->
+                <div class="gallery-item relative col-span-2 row-span-2 w-full h-100 overflow-hidden group"
+                    data-region="beaches" data-original-class="col-span-2 row-span-2 w-full h-100">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpOuj1Z6B_YEBSFARv-qskK2ua1Sd9V8Io3NPBiFe5KwC6tFgCxhuwVeASlwa7pLr_7MkYsOH-GCTcWCNzC9pgBKxP_DccDSTEKGLsWjhZhMiacn7uP7MN20A4OSvXQ0yVwbJgd38kINv8PiI8OysXuyLnGAGzkCCvNlIqZ4irLalNvhkgAQlfhd3XEV8Z9ZaE7QVXsE2s44aXQuLM9a_Eceh-M48orc4BEVuu7q7OIvpFXUAGTnt4Doqj5LmgP1mmXcqFMiQIucY0"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Nature's Architecture</p>
+                        <p class="text-white/70 text-xs">Beach</p>
+                    </div>
+                </div>
+
+                <!-- CULTURE -->
+                <div class="gallery-item relative row-span-2 w-full h-full overflow-hidden group" data-region="culture"
+                    data-original-class="row-span-2 w-full h-full">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu89kpYXVzx6gOHPsqaaTCCnf0p4l9egx0ZK83JLQHDZu6a49DOvi2RRmfQZeXsjfVptz0a4uICfNk3KH5cdym16t-OIxgfC8t5S4JoIEf9v5KUdRax_ycZ01eRmp-5dz4yYcmWV9KMVSjLyOPQ1xXWpNlmic2G4U876M-hy-M1fe9E_FHPtoXk5Goy2UKcn3XTLBVU2J7MEHoW42oHUE_AWG_wHVtaJyEP30J6el4aa1Q_CiVxvcDSsB1uYK6wwGZcO0razapOd1A"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Tenun</p>
+                        <p class="text-white/70 text-xs">Culture</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative w-full h-70 overflow-hidden group" data-region="culture"
+                    data-original-class="w-full h-70">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSDd4y4oaEmQA6jWvc9WH9ck3sm8rkcuxC1A&s"
+                        alt="">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Pasola</p>
+                        <p class="text-white/70 text-xs">Culture</p>
+                    </div>
+                </div>
+
+                <!-- ADVENTURES -->
+                <div class="gallery-item relative w-full h-70 overflow-hidden group" data-region="adventures"
+                    data-original-class="w-full h-70">
+                    <img class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                        src="https://authentic-indonesia.com/wp-content/uploads/2019/04/tanggedu-waterfall-the-grand-canyon-of-east-sumba.jpg"
+                        alt="Tanggedu Waterfall">
+                    <div
+                        class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-white text-sm font-medium leading-tight">Tanggedu Waterfall</p>
+                        <p class="text-white/70 text-xs">Adventure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center my-10 mx-25">
+                <button id="btnShowMore" class="inline-flex items-center justify-center gap-2 bg-white text-blue-900 ring-2 ring-blue-950 rounded-lg font-semibold p-2 hover:bg-blue-200">
+                    Show More
+                    <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="py-3 mt-10">
+            <div class="flex items-center justify-between mx-25 lg:gap-2 md:gap-2">
+                <div class="flex flex-col justify-center lg:gap-4 md:gap-3 lg:w-100 md:w-60">
+                    <h3 class="lg:text-2xl md:text-xl text-blue-950 font-semibold dark:text-blue-500">Sumba Tropical Luxury</h3>
+                    <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">Curating the finest coastal experiences on Indonesia's most mystical island.</p>
+                </div>
+                <div class="flex lg:flex-row md:flex-col items-center lg:gap-4 md:gap-1.5">
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Privacy Policy</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Terms of Service</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="contact.html">Contact Us</a>
+                </div>
+                <div class="flex items-center justify-center lg:gap-4 md:gap-3">
+                    <a href="" title="Instagram">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="" title="Facebook">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mx-25 py-2">
+                <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">&copy; 2024 Sumba Tropical Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

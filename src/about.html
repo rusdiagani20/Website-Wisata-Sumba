@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="32x32" href="favicon/favicon-32x32.png" type="image/png">
+    <title>About Us - Sumba Tropical Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <header class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm dark:bg-gray-900/70">
+        <nav aria-label="Global" class="flex items-center justify-between p-3 shadow-xl lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center gap-1.4">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-9 pb-2 text-blue-950 dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    <h1 class="text-blue-900 font-semibold lg:text-xl dark:text-blue-500">Sumba Tropical Luxury</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-5">
+                <a href="index.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50 
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Home
+                </a>
+
+                <a href="destinations.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Destinations
+                </a>
+
+                <a href="gallery.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Gallery
+                </a>
+
+                <a href="about.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                About
+                </a>
+
+                <a href="contact.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Contact
+                </a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end">
+                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-500 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 dark:bg-neutral-secondary-medium sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+                    </a>
+                        <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500">
+                            <div class="space-y-2 py-6">
+                                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Home</a>
+                                <a href="destinations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Destinations</a>
+                                <a href="gallery.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Gallery</a>
+                                <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">About</a>
+                                <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Contact</a>
+                            </div>
+                            <div class="py-6 flex flex-col gap-3">
+                                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-center text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                                <button id="theme-toggle-mobile" type="button" class="w-full text-blue-950 bg-gray-200 text-center text-sm font-semibold p-2.5 ring-2 ring-gray-400 rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-50 dark:ring-gray-600 dark:hover:bg-gray-600 flex items-center justify-center gap-2">
+                                    <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                    <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+    <section>
+        <div class="relative flex flex-col items-center justify-center gap-10
+            min-h-screen
+            bg-[url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&q=80&w=2070')]
+            bg-cover bg-center bg-no-repeat">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center gap-5">
+                <p class="lg:text-base md:text-sm text-white font-semibold font-manrope">ABOUT US</p>
+                <h1 class="lg:text-8xl md:text-5xl text-white font-bold">Our Story</h1>
+                <p class="lg:text-base md:text-sm text-white font-semibold bg-white/30 p-4 w-3/4 text-center rounded dark:bg-gray-500/30">
+                    Sumba Tropical Luxury was born from a singular vision: to honor the untamed spirit of the forgotten island. We believe that true luxury lies in the preservation of the raw, the authentic, and the ancient.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex justify-between mx-25 my-20">
+            <h1 class="lg:text-5xl md:text-2xl text-blue-950 w-1/2 dark:text-blue-500">A Philosophy of Intentional Living</h1>
+            <p class="lg:text-base md:text-sm text-gray-700 font-semibold text-end w-80 mt-9 dark:text-gray-50">Every element of our sanctuary is a dialogue between Sumba’s wild terrain and contemporary architectural elegance.</p>
+        </div>
+        <div class="grid grid-cols-3 justify-center my-20 mx-25 gap-5">
+            <div class="flex flex-1 flex-col shadow-lg/20 p-7 gap-5 rounded-lg hover:bg-sky-900 transition-colors duration-300 group dark:bg-neutral-secondary-medium">
+                <div class="flex items-center justify-center p-4">
+                    <svg class="text-blue-950 group-hover:text-blue-500 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="54px" viewBox="0 -960 960 960" width="54px" fill="currentColor"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm457-560 21-89-71-59 94-8 36-84 36 84 94 8-71 59 21 89-80-47-80 47ZM480-481Z"/></svg>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h6 class="lg:text-xl md:text-lg text-blue-950 font-semibold group-hover:text-white dark:text-blue-500">Authenticity</h6>
+                    <p class="lg:text-base md:text-sm text-gray-600 text-justify group-hover:text-gray-400 dark:text-gray-50">Direct connection to the local culture, preserving the sacred rituals and traditions of the Marapu people.</p>
+                </div>
+            </div>
+            <div class="flex flex-1 flex-col shadow-lg/20 p-7 gap-5 rounded-lg hover:bg-sky-900 transition-colors duration-300 group dark:bg-neutral-secondary-medium">
+                <div class="flex items-center justify-center p-4">
+                    <svg class="text-blue-950 group-hover:text-blue-500 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="54px" viewBox="0 -960 960 960" width="54px" fill="currentColor"><path d="M213-175q-43.59-45-68.3-104Q120-338 120-400q0-73 25.5-133.5T222-645q35-35 87-59t122.5-37.5Q502-755 591-758.5t198 3.5q8 108 5.5 197.5t-16 160.75q-13.5 71.25-38 124.56Q716-218.87 680-183q-51 51-110 77T444-80q-69 0-126.5-23.5T213-175Zm103 0q25 17 58 26t69.92 9Q497-140 547-162t91-64q27-27 46-70.5t31-103Q727-459 731-534t0-165q-94-2-168.5 2.5T431-680q-57 12-98 30.5T266-604q-42 43-64 91t-22 98q0 48 20.5 100.5T251-230q53-98 127-176t157-123q-87 75-141 162.5T316-175Zm0 0Zm0 0Z"/></svg>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h6 class="lg:text-xl md:text-lg text-blue-950 font-semibold group-hover:text-white dark:text-blue-500">Sustainability</h6>
+                    <p class="lg:text-base md:text-sm text-gray-600 text-justify group-hover:text-gray-400 dark:text-gray-50">Operating with a circular mindset, from solar harvesting to zero-waste organic farming on our grounds.</p>
+                </div>
+            </div>
+            <div class="flex flex-1 flex-col shadow-lg/20 p-7 gap-5 rounded-lg hover:bg-sky-900 transition-colors duration-300 group dark:bg-neutral-secondary-medium">
+                <div class="flex items-center justify-center p-4">
+                    <svg class="text-blue-950 group-hover:text-blue-500 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="54px" viewBox="0 -960 960 960" width="54px" fill="currentColor"><path d="M480-120 80-600l120-240h560l120 240-400 480ZM368-630h224l-75-150h-74l-75 150Zm82 381v-321H183l267 321Zm60 0 267-321H510v321Zm149-381h136l-75-150H584l75 150Zm-494 0h136l75-150H240l-75 150Z"/></svg>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h6 class="lg:text-xl md:text-lg text-blue-950 font-semibold group-hover:text-white dark:text-blue-500">Luxury</h6>
+                    <p class="lg:text-base md:text-sm text-gray-600 text-justify group-hover:text-gray-400 dark:text-gray-50">Refined simplicity. We define luxury as the abundance of space, silence, and time for contemplation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex items-center justify-center gap-10 my-20 mx-25">
+            <div class="flex-1">
+                <img class="h-full w-full" src="https://ik.imagekit.io/tvlk/blog/2020/01/Headbanner-scaled.jpg?tr=q-70,h-250,w-250" alt="">
+            </div>
+            <div class="flex-1 flex flex-col justify-center gap-5">
+                <p class="lg:text-lg md:text-base font-bold text-cyan-700">Conscious Tourism</p>
+                <h1 class="lg:text-5xl md:text-3xl text-blue-950 dark:text-blue-500">Earth & Community</h1>
+                <p class="lg:text-base md:text-sm text-justify dark:text-gray-50">We are guests on this island. Our commitment goes beyond carbon neutrality—we invest directly in Sumba’s future. Through our community fund, we support local schools, provide access to clean water, and promote medical initiatives for the remote villages surrounding our estates.</p>
+                <div class="flex items-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="38px" fill="#073d4b"><path d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z"/></svg>
+                    <div>
+                        <p class="lg:text-base md:text-sm text-blue-950 font-semibold dark:text-blue-500">100% Solar Powered</p>
+                        <p class="lg:text-sm md:text-xs dark:text-gray-50">Harvesting the intense Sumba sun to power our entire collection of villas.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="42px" viewBox="0 -960 960 960" width="42px" fill="#073d4b"><path d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z"/></svg>
+                    <div>
+                        <p class="lg:text-base md:text-sm text-blue-950 font-semibold dark:text-blue-500">Local Artisan Collaboration</p>
+                        <p class="lg:text-sm md:text-xs dark:text-gray-50">Every piece of furniture is handcrafted by Sumbanese woodworkers using fallen timber.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col items-center justify-center gap-10 bg-sky-950 mx-25 my-20 p-10 rounded-lg">
+            <h1 class="lg:text-5xl md:text-2xl text-white">Join Our Journey</h1>
+            <p class="lg:text-base md:text-sm text-gray-300 font-semibold text-center">Experience the raw elegance of Sumba. Be part of a legacy that values the earth as much as the traveler.</p>
+            <div class="flex gap-5">
+                <a class="bg-white lg:text-base md:text-xs text-sky-950 font-semibold py-2 px-4 ring-2 rounded hover:bg-gray-300" href="https://wa.me/6281234567890">Request Private Tour</a>
+                <a class="text-white lg:text-base md:text-xs font-semibold py-2 px-4 ring-2 rounded hover:bg-gray-400/30" href="https://wa.me/6281234567890">Join Newsletter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="py-3 mt-10">
+            <div class="flex items-center justify-between mx-25 lg:gap-2 md:gap-2">
+                <div class="flex flex-col justify-center lg:gap-4 md:gap-3 lg:w-100 md:w-60">
+                    <h3 class="lg:text-2xl md:text-xl text-blue-950 font-semibold dark:text-blue-500">Sumba Tropical Luxury</h3>
+                    <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">Curating the finest coastal experiences on Indonesia's most mystical island.</p>
+                </div>
+                <div class="flex lg:flex-row md:flex-col items-center lg:gap-4 md:gap-1.5">
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Privacy Policy</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Terms of Service</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="contact.html">Contact Us</a>
+                </div>
+                <div class="flex items-center justify-center lg:gap-4 md:gap-3">
+                    <a href="" title="Instagram">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="" title="Facebook">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mx-25 py-2">
+                <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">&copy; 2024 Sumba Tropical Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

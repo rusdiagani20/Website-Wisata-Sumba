@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="32x32" href="favicon/favicon-32x32.png" type="image/png">
+    <title>About Us - Sumba Tropical Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <header class="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm dark:bg-gray-900/70">
+        <nav aria-label="Global" class="flex items-center justify-between p-3 shadow-xl lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center gap-1.4">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-9 pb-2 text-blue-950 dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    <h1 class="text-blue-900 font-semibold lg:text-xl dark:text-blue-500">Sumba Tropical Luxury</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-5">
+                <a href="index.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50 
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Home
+                </a>
+
+                <a href="destinations.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Destinations
+                </a>
+
+                <a href="gallery.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Gallery
+                </a>
+
+                <a href="about.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                About
+                </a>
+
+                <a href="contact.html" class="relative text-gray-600 font-semibold hover:text-blue-900 link-active
+                after:content-[''] after:absolute after:left-0 after:bottom-0
+                after:h-0.5 after:w-full after:bg-blue-900
+                after:scale-x-0 after:origin-left
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100 dark:text-gray-50
+                dark:hover:text-blue-500 dark:after:bg-blue-500">
+                Contact
+                </a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-2 lg:justify-end">
+                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-500 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 dark:bg-neutral-secondary-medium sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                    <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+                    </a>
+                        <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-blue-950 dark:text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500">
+                            <div class="space-y-2 py-6">
+                                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Home</a>
+                                <a href="destinations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Destinations</a>
+                                <a href="gallery.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Gallery</a>
+                                <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">About</a>
+                                <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-600 hover:bg-gray-300 link-active">Contact</a>
+                            </div>
+                            <div class="py-6 flex flex-col gap-3">
+                                <a href="https://wa.me/6281234567890" class="bg-blue-900 text-white text-center text-sm font-semibold p-2.5 ring-2 rounded hover:bg-blue-950 hover:ring-2 hover:ring-white dark:bg-blue-800">Book Now</a>
+                                <button id="theme-toggle-mobile" type="button" class="w-full text-blue-950 bg-gray-200 text-center text-sm font-semibold p-2.5 ring-2 ring-gray-400 rounded hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-50 dark:ring-gray-600 dark:hover:bg-gray-600 flex items-center justify-center gap-2">
+                                    <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                    <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+    <section>
+        <div class="relative flex flex-col items-center justify-center gap-10
+            min-h-screen
+            bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWBxDso-bl1lkyyx1t5xVQRqU-pDDM7ckgXQCP_SvPPcccj57PTP2FTuG14PXEtW9AgXifYVnGN3Rs42rTkiB3P2hZORIS3swRrYcn7s3fAwEIxkZyms701zJX38Zj6FXMuHuYjPR6dWKzPPBBlGzsIh3W3Rl2ravRsUyPDGjSY4HB6Ko9WY4RCdTNYFLkN-c9U_luLQeA_1szGxg8RUnBZ9QSPU3-oy8qRvmzQ7eGcyN3d4MAK42DUyQ_XEa8h7G2RW3GRKCpeq0D')]
+            bg-cover bg-center bg-no-repeat">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/50"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center gap-5">
+                <h1 class="lg:text-8xl md:text-5xl text-white font-bold">Get in Touch</h1>
+                <p class="lg:text-base md:text-sm text-gray-300 font-semibold text-center">
+                    Begin your journey to the untouched paradise of Sumba Island.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex lg:flex-row md:flex-col justify-center gap-5 my-20 mx-25">
+            <form id="tripForm" class="w-full h-full mx-auto shadow-lg p-10 rounded-lg bg-white/80 backdrop-blur-sm dark:bg-neutral-secondary-medium">
+                <div class="mb-5">
+                    <label for="name" class="block mb-2.5 lg:text-base md:text-sm font-medium text-heading">Full name</label>
+                    <input type="text" id="name" class="bg-neutral-secondary-medium border border-default-medium text-heading lg:text-sm md:text-xs rounded-base focus:ring-blue-950 focus:border-blue-950 block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Input Name" required />
+                </div>
+                <div class="mb-5">
+                    <label for="phone" class="block mb-2.5 lg:text-base md:text-sm font-medium text-heading">Phone Number</label>
+                    <input type="text" id="phone" class="bg-neutral-secondary-medium border border-default-medium text-heading lg:text-sm md:text-xs rounded-base focus:ring-blue-950 focus:border-blue-950 block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Input Phone Number" required />
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="block mb-2.5 lg:text-base md:text-sm font-medium text-heading">Email address</label>
+                    <input type="email" id="email" class="bg-neutral-secondary-medium border border-default-medium text-heading lg:text-sm md:text-xs rounded-base focus:ring-blue-950 focus:border-blue-950 block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Ex: infosumbawisata@gmail.com" required />
+                </div>
+                <div class="mb-5">
+                    <label for="trip_date" class="block mb-2.5 lg:text-base md:text-sm font-medium text-heading">Expected Trip Date</label>
+                    <input type="date" id="trip_date" class="bg-neutral-secondary-medium border border-default-medium text-heading lg:text-sm md:text-xs rounded-base focus:ring-blue-950 focus:border-blue-950 block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
+                </div>
+                <div class="mb-5">
+                    <label for="message" class="block mb-2.5 lg:text-base md:text-sm font-medium text-heading">Your message</label>
+                    <textarea id="message" rows="4" class="bg-neutral-secondary-medium border border-default-medium text-heading lg:text-sm md:text-xs rounded-base focus:ring-blue-950 focus:border-blue-950 block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="w-full">
+                    <button type="submit" class="text-white w-full bg-blue-900 box-border border border-transparent hover:bg-blue-950 focus:ring-4 focus:ring-blue-950 shadow-xs font-medium leading-5 rounded-base lg:text-base md:text-sm px-4 py-2.5 focus:outline-none">Submit</button>
+                </div>
+            </form>
+            <div class="flex flex-col justify-center gap-10 shadow-lg p-10 rounded-lg">
+                <div class="flex flex-col justify-center gap-5">
+                    <p class="lg:text-xl md:text-lg text-cyan-700 font-semibold">Concierge Services</p>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="m756-228 77-76-57-81h-70q-9-25-12.5-46.5T690-479q0-26 3.5-47t12.5-47h70l57-81-77-76q-55 45-85.5 111T640-479q0 74 30.5 140T756-228ZM0-120v-720h960v720H0Zm591-60h309v-600H60v600h7q44-69 112.5-109T329-329q81 0 149.5 40T591-180ZM414-435q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35ZM143-180h372q-36-42-84.5-65.5T329-269q-53 0-101.5 23.5T143-180Zm143-297q-17-17-17-43t17-43q17-17 43-17t43 17q17 17 17 43t-17 43q-17 17-43 17t-43-17Zm194-3Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="text-blue-950 font-semibold dark:text-blue-500">Phone & WhatsApp</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">+62 812 3456 7890</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">Mon-Sun, 8am - 8pm WITA</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M80-160v-640h800v640H80Zm400-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="text-blue-950 font-semibold dark:text-blue-500">Email</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">infosumbawisata@gmail.com</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">Mon-Sun, 8am - 8pm WITA</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start gap-5">
+                        <svg class="text-blue-950 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M529.5-510.5Q550-531 550-560t-20.5-49.5Q509-630 480-630t-49.5 20.5Q410-589 410-560t20.5 49.5Q451-490 480-490t49.5-20.5ZM480-159q133-121 196.5-219.5T740-552q0-118-75.5-193T480-820q-109 0-184.5 75T220-552q0 75 65 173.5T480-159Zm0 79Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                        <div class="flex flex-col">
+                            <p class="text-blue-950 font-semibold dark:text-blue-500">Island Office</p>
+                            <p class="lg:text-base md:text-sm text-gray-500">Jl. Pantai Nihiwatu No. 88 Sumba Barat, East Nusa Tenggara Indonesia</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="flex flex-col justify-center gap-5">
+                    <p class="lg:text-xl md:text-lg text-cyan-700 font-semibold">Follow Our Journey</p>
+                    <div class="flex items-center gap-3">
+                        <a href="#">
+                            <svg class="w-6 h-6 text-gray-800 hover:text-blue-900 dark:text-white dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="w-6 h-6 text-gray-800 hover:text-blue-900 dark:text-white dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="w-6 h-6 text-gray-800 hover:text-blue-900 dark:text-white dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="w-6 h-6 text-gray-800 hover:text-blue-900 dark:text-white dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-5">
+                    <p class="lg:text-xl md:text-lg text-cyan-700 font-semibold">Location</p>
+                    <iframe class="w-full h-70 rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.863382947641!2d119.37364727408641!3d-9.777625503809837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c9daffdedf4df%3A0x2b81189bedf1a30a!2sNIHI%20Sumba!5e0!3m2!1sen!2sid!4v1775914908526!5m2!1sen!2sid" width="none" height="none" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>       
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex justify-center gap-5 my-20 mx-25">
+            <div id="accordion-card" class="w-full" data-accordion="collapse">
+                <h2 id="accordion-card-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full p-5 lg:text-base md:text-sm font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-blue-900 hover:bg-neutral-secondary-medium gap-3 aria-expanded:rounded-b-none aria-expanded:shadow-none" data-accordion-target="#accordion-card-body-1" aria-expanded="true" aria-controls="accordion-card-body-1">
+                        <span>What is the best time to visit Sumba?</span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+                    </button>
+                </h2>
+                <div id="accordion-card-body-1" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-1">
+                    <div class="p-4 md:p-5">
+                        <p class="mb-2 lg:text-base md:text-sm text-body">The ideal time to visit is during the dry season from April to October. During this period, the island is easily accessible, and the weather is perfect for beach activities and exploring traditional villages.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-card-heading-2" class="mt-4">
+                    <button type="button" class="flex items-center justify-between w-full p-5 lg:text-base md:text-sm font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-blue-900 hover:bg-neutral-secondary-medium gap-3 aria-expanded:rounded-b-none aria-expanded:shadow-none" data-accordion-target="#accordion-card-body-2" aria-expanded="false" aria-controls="accordion-card-body-2">
+                        <span>How do I reach the island?</span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+                    </button>
+                </h2>
+                <div id="accordion-card-body-2" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-2">
+                    <div class="p-4 md:p-5">
+                        <p class="mb-2 lg:text-base md:text-sm text-body">Sumba is accessible via daily flights from Bali (Denpasar) to Tambolaka in the west or Waingapu in the east. We provide private transfer services from both airports for our guests.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-card-heading-3" class="mt-4">
+                    <button type="button" class="flex items-center justify-between w-full p-5 lg:text-base md:text-sm font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-blue-900 hover:bg-neutral-secondary-medium gap-3 aria-expanded:rounded-b-none aria-expanded:shadow-none" data-accordion-target="#accordion-card-body-3" aria-expanded="false" aria-controls="accordion-card-body-3">
+                        <span>Are private guides available for village tours?</span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
+                    </button>
+                </h2>
+                <div id="accordion-card-body-3" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-3">
+                    <div class="p-4 md:p-5">
+                        <p class="mb-2 lg:text-base md:text-sm text-body">Yes, we highly recommend our local certified guides who can introduce you to the rich megalithic culture, unique marapu traditions, and intricate ikat weaving of the Sumbanese people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="py-3 mt-10">
+            <div class="flex items-center justify-between mx-25 lg:gap-2 md:gap-2">
+                <div class="flex flex-col justify-center lg:gap-4 md:gap-3 lg:w-100 md:w-60">
+                    <h3 class="lg:text-2xl md:text-xl text-blue-950 font-semibold dark:text-blue-500">Sumba Tropical Luxury</h3>
+                    <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">Curating the finest coastal experiences on Indonesia's most mystical island.</p>
+                </div>
+                <div class="flex lg:flex-row md:flex-col items-center lg:gap-4 md:gap-1.5">
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Privacy Policy</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="">Terms of Service</a>
+                    <a class="lg:text-base md:text-xs text-gray-700 font-semibold hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" href="contact.html">Contact Us</a>
+                </div>
+                <div class="flex items-center justify-center lg:gap-4 md:gap-3">
+                    <a href="" title="Instagram">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="" title="Facebook">
+                        <svg class="w-6 h-6 text-gray-700 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center mx-25 py-2">
+                <p class="lg:text-base md:text-xs text-gray-700 font-semibold dark:text-gray-50">&copy; 2024 Sumba Tropical Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
